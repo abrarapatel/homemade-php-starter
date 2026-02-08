@@ -1,0 +1,9 @@
+# .htaccess in project root (minixo/)
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+
+    # Redirect everything to the public directory
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
