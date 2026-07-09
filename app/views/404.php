@@ -1,9 +1,9 @@
 <?php
 $homeUrl = '';
 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
-    $homeUrl .= "https://" . $_SERVER['HTTP_HOST'] . "/";
+    $homeUrl = "https://" . $_SERVER['HTTP_HOST'] . "/";
 } else {
-    $homeUrl .= "http://" . $_SERVER['HTTP_HOST'] . "/sami-art/";
+    $homeUrl = "http://" . $_SERVER['HTTP_HOST'] . "/";
 }
 ?>
 

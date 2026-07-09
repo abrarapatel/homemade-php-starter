@@ -44,8 +44,8 @@ class AuthMiddleware
     public static function login($username, $password)
     {
         // Static credentials
-        $validUsername = 'adminsami';
-        $validPassword = 'password123';
+        $validUsername = 'admin';
+        $validPassword = 'password';
 
         if ($username === $validUsername && $password === $validPassword) {
             // Regenerate session ID to prevent session fixation

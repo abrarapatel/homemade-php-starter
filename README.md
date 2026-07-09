@@ -18,23 +18,24 @@ A lightweight, high-performance PHP framework designed for small business websit
 minimalist-php-mvc/
 ├── app/
 │   ├── config/
-│   │   └── routes.php          # Route definitions
+│   │   └── routes.php           # Route definitions
 │   ├── Controllers/             # Controller classes
 │   └── views/                   # View templates
 │       └── layouts/
 │           └── main.php         # Master layout template
-├── assets/
-│   ├── images/                  # Static images
-│   ├── icons/                   # Icon files
-│   └── favicons/                # Favicon files
-├── css/
-│   ├── global.css               # Global styles
-│   └── pages/                   # Page-specific styles
-├── js/
-│   ├── global.js                # Global scripts
-│   └── pages/                   # Page-specific scripts
-├── .htaccess                    # URL rewriting configuration
-└── index.php                    # Main entry point and router
+└── public_html/                 # Web root directory
+    ├── assets/
+    │   ├── images/              # Static images
+    │   ├── icons/               # Icon files
+    │   └── favicons/            # Favicon files
+    ├── css/
+    │   ├── global.css           # Global styles
+    │   └── pages/               # Page-specific styles
+    ├── js/
+    │   ├── global.js            # Global scripts
+    │   └── pages/               # Page-specific scripts
+    ├── .htaccess                # URL rewriting configuration
+    └── index.php                # Main entry point and router
 ```
 
 ## 🛠️ Quick Start

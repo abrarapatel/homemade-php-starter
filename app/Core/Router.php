@@ -19,13 +19,17 @@ class Router
 
         $scriptName = $_SERVER['SCRIPT_NAME'];
         // Determine the base path (e.g., /minixo)
-        $basePath = str_replace(['/public/index.php', '/index.php'], '', $scriptName);
+        $basePath = str_replace(['/public_html/index.php', '/public/index.php', '/index.php'], '', $scriptName);
 
         $path = substr($requestUri, strlen($basePath));
 
-        // If the path still starts with /public, strip it
-        // This handles cases where the user explicitly types /public/
-        if (strpos($path, '/public/') === 0) {
+        // If the path still starts with /public_html, strip it
+        // This handles cases where the user explicitly types /public_html/
+        if (strpos($path, '/public_html/') === 0) {
+            $path = substr($path, 12);
+        } elseif ($path === '/public_html') {
+            $path = '/';
+        } elseif (strpos($path, '/public/') === 0) {
             $path = substr($path, 7);
         } elseif ($path === '/public') {
             $path = '/';
